@@ -5,3 +5,4 @@ How to use this code?
 2. Open the project in your favorite IDE.
 3. Make sure you import the project as 'Maven' project.
 4. Run the test both on IDE and CMD. 
+5. Enjoy!
