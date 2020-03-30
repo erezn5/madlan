@@ -1,7 +1,5 @@
 package com.madlan.selenium;
 
-import com.madlan.selenium.LibraryUtils;
-import com.madlan.selenium.OrangehrmliveLogin;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.slf4j.Logger;
@@ -12,7 +10,8 @@ import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-import static org.testng.Assert.*;
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.fail;
 
 public class TestLoginPage {
         private final Logger logger = LoggerFactory.getLogger(TestLoginPage.class);
@@ -36,6 +35,7 @@ public class TestLoginPage {
         @Test
         public void testLogin() throws Exception {
             driver.get("https://opensource-demo.orangehrmlive.com/");
+            driver.manage().window().maximize();
             OrangehrmliveLogin orangehrmliveLogin = new OrangehrmliveLogin(driver);
             extractedCredentials=orangehrmliveLogin.gettingUserNameAndPassword();
             orangehrmliveLogin.clickLogin();

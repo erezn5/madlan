@@ -1,5 +1,7 @@
 package com.madlan.selenium;
 
+import java.lang.String;
+
 import javax.net.ssl.HttpsURLConnection;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
